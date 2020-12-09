@@ -25,14 +25,21 @@
 <script src="js.cookie.min.js"></script>
 <script src="ui.js"></script>
 
-<script async src="//api.adinplay.com/display/pub/RKB/rocketbirds.ga/display.min.js"></script>
-<script async src="//api.adinplay.com/player/v2/RKB/rocketbirds.ga/player.min.js"></script>
 <script>
-	var aiptag = aiptag || {};
-	aiptag.cmd = aiptag.cmd || [];
+	window.aiptag = window.aiptag || {cmd: []};
 	aiptag.cmd.display = aiptag.cmd.display || [];
 	aiptag.cmd.player = aiptag.cmd.player || [];
+
+	//CMP tool settings
+	aiptag.cmp = {
+		show: true,
+		position: "centered",  //centered, bottom
+		button: true,
+		buttonText: "Privacy settings",
+		buttonPosition: "bottom-left" //bottom-left, bottom-right, top-left, top-right
+	}
 </script>
+<script async src="//api.adinplay.com/libs/aiptag/pub/KOH/rocketbirds.ga/tag.min.js"></script>
 <script id="options">
 	window.options = {
 		mode:"FFA",
